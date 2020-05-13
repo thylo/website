@@ -24,34 +24,63 @@ function sanitizePath(filepath) {
   return sanitizedFilepath;
 }
 
+function getFiles(sourceDir) {
+  return new Promise((resolve, reject) =>
+    glob(`${sourceDir}/**/*`, { nodir: true }, (err, data) => {
+      if (err) reject(err);
+      resolve(data);
+    })
+  );
+}
+
+function fileExist(file) {
+  return new Promise((resolve, reject) =>
+    fs.access(file, (err, value) => {
+      resolve(!err);
+    })
+  );
+}
+
+function createDir(file, options) {
+  return new Promise((resolve, reject) =>
+    fs.mkdir(file, options, (err, value) => {
+      if (err) reject(err);
+      resolve(value);
+    })
+  );
+}
+
 // copy assets
-function copyAssets(done) {
-  assetsDirs.forEach((dir) => {
-    // src and dist
-    let sourceDir = sanitizePath(dir.src);
-    let distDir = sanitizePath(dir.dist);
+function copyAssets() {
+  return Promise.all(
+    assetsDirs.map(async (dir) => {
+      const sourceDir = sanitizePath(dir.src);
+      const distDir = sanitizePath(dir.dist);
 
-    // glob all files
-    let files = glob.sync(`${sourceDir}/**/*`, { nodir: true });
+      // glob all files
+      const files = await getFiles(sourceDir);
 
-    // copy each file to dist dir
-    files.forEach(function (file) {
-      let srcFile = file;
-      let distFile = srcFile.replace(sourceDir, distDir);
-      let distDirname = path.dirname(distFile);
+      // copy each file to dist dir
+      await Promise.all(
+        files.map(async (file) => {
+          let srcFile = file;
+          let distFile = srcFile.replace(sourceDir, distDir);
+          let distDirname = path.dirname(distFile);
 
-      if (!fs.existsSync(distDirname)) {
-        fs.mkdirSync(distDirname, { recursive: true });
-      }
+          const dirExist = await fileExist(distDirname);
+          if (!dirExist) {
+            await createDir(distDirname, { recursive: true });
+          }
 
-      if (!fs.existsSync(distFile) || dir.force === true) {
-        fs.copyFile(srcFile, distFile, (err) => {
-          if (err) throw err;
-        });
-      }
-    });
-  });
-  done();
+          if (!(await fileExist(distFile)) || dir.force === true) {
+            fs.copyFile(srcFile, distFile, (err) => {
+              if (err) throw err;
+            });
+          }
+        })
+      );
+    })
+  );
 }
 
 // exports
