@@ -1,36 +1,36 @@
 {
-  "name": "webstoemp",
-  "description": "Personal website of Jérôme Coupé",
+  "name": "thylo",
+  "description": "Personal website of Julien Moreau",
   "version": "2.0.0",
-  "author": "Jérôme Coupé",
+  "author": "Julien Moreau",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeromecoupe/jeromecoupe.github.io"
+    "url": "https://github.com/thylo/website"
   },
   "browserslist": [
     "last 2 versions",
     "not ie < 11"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "acorn": "^7.1.1",
+    "acorn": "^7.2.0",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-loader": "^4.0.2",
     "glob": "^7.1.6",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "moment": "^2.25.2",
+    "moment": "^2.25.3",
     "sharp": "^0.25.2",
     "webpack": "^4.43.0"
   },

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ metaTitle }} - Webstoemp</title>
+  <meta name="description" content="{{ metaDescription }}">
+
+  <!-- Preload -->
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="/fonts/spectral-600.woff2">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/main.min.css">
+
+  <!-- Feed -->
+  <link rel="alternate" href="/feed.xml" title="Webstoemp blog feed, by Jérôme Coupé" type="application/atom+xml">
+
+  <!-- Twitter + Open Graph -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="{{ site.authorTwitter }}" />
+  <meta property="og:url" content="{{ site.url ~ page.url }}" />
+  <meta property="og:title" content="{{ metaTitle }}" />
+  <meta property="og:description" content="{{ metaDescription }}" />
+  <meta property="og:image" content="{{ metaImage }}" />
+
+  <!-- Apple icon (minimal) -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- defer scripts -->
+  <script src="/js/main.bundle.js" defer></script>
+
+</head>
+<body>
+  {% include "partials/siteheader.njk" %}
+  {% include "partials/mobilemenu.njk" %}
+
+  {% block content %}{% endblock %}
+
+  {% include "partials/sitefooter.njk" %}
+</body>
+</html>
