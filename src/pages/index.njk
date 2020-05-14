@@ -3,22 +3,37 @@ permalink: index.html
 ---
 {% extends "layouts/base.njk" %}
 {% block content %}
-    <h1>Ho, hi there !</h1>
-    <h2>
-        My name is Julien. I live in Belgium and I write code for a living as well as for fun. I also share my love of
-        code with students.
-    </h2>
-    <p>
-        As you may have guessed, this site is slowly being built during my free time. Please check back later to see
-        some improvements...
-    </p>
-    <div>
-        <h3>In the meantime you may want to follow me on :</h3>
-        <ul>
-            <li><a href="https://twitter.com/thylo">Twitter</a></li>
-            <li><a href="https://facebook.com/julien.moreau">Facebook</a></li>
-            <li><a href="https://github.com/thylo">Github</a></li>
-        </ul>
-        <p>You may also send me an old fashioned e-mail to <a href="mailto:julien@thylo.be">julien@thylo.be</a></p>
+    <div class="l-container">
+        <div class="c-hero">
+            <h1>Ho,<br/> hi <span class="u-color-accent">there !</span></h1>
+        </div>
+        <div class="o-box">
+            <h2>
+                My name is Julien. I live in Belgium and I write code for a living as well as for fun. I also share my passion with students.
+            </h2>
+        </div>
+        <div class="c-wobble">
+            <img src="/img/wobbly.svg">
+        </div>
+        <div class="o-box">
+            <p>
+                As you may have noticed, this site is slowly being built during my free time. Please check back later to see
+                some improvements...
+            </p>
+            <div class="c-signature">
+                <img src="/img/thylo.svg">
+            </div>
+        </div>
+    </div>
+    <div class="o-box o-box--light">
+        <div class="l-container">
+            <h3>In the meantime you may want to follow me on :</h3>
+            <ul>
+                <li><a href="https://twitter.com/thylo">Twitter</a></li>
+                <li><a href="https://facebook.com/julien.moreau">Facebook</a></li>
+                <li><a href="https://github.com/thylo">Github</a></li>
+            </ul>
+            <p>You may also send me an old fashioned e-mail to <a href="mailto:julien@thylo.be">julien@thylo.be</a></p>
+        </div>
     </div>
 {% endblock %}

@@ -1,19 +1,21 @@
 @import "./fonts/source-sans-pro";
 @import "./fonts/source-serif-pro";
-$color-accent : #EB2F06;
+$color-accent: #eb2f06;
 
 $mq-breakpoints: (
-        mobile:  320px,
-        tablet:  740px,
-        desktop: 980px,
-        wide:    1300px
+  mobile: 320px,
+  tablet: 740px,
+  desktop: 980px,
+  wide: 1300px,
 );
 
-@import '../../../node_modules/sass-mq/mq';
+$spacing-unit: 6px;
+
+@import "../../../node_modules/sass-mq/mq";
 
 //Mobile
 
-@mixin ff-mobile-xxl{
+@mixin ff-mobile-xxl {
   font-family: "Source Serif Pro";
   font-weight: 600;
   font-size: 64px;
@@ -22,7 +24,7 @@ $mq-breakpoints: (
   line-height: 72px;
 }
 
-@mixin ff-mobile-xl{
+@mixin ff-mobile-xl {
   font-family: "Source Serif Pro";
   font-weight: 400;
   font-size: 31px;
@@ -31,7 +33,7 @@ $mq-breakpoints: (
   line-height: 42px;
 }
 
-@mixin ff-mobile-l{
+@mixin ff-mobile-l {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 25px;
@@ -40,7 +42,7 @@ $mq-breakpoints: (
   line-height: 30px;
 }
 
-@mixin ff-mobile-m{
+@mixin ff-mobile-m {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 18px;
@@ -49,7 +51,7 @@ $mq-breakpoints: (
   line-height: 24px;
 }
 
-@mixin ff-mobile-s{
+@mixin ff-mobile-s {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 12px;
@@ -60,7 +62,7 @@ $mq-breakpoints: (
 
 //Desktop
 
-@mixin ff-desktop-xxl{
+@mixin ff-desktop-xxl {
   font-family: "Source Serif Pro";
   font-weight: 600;
   font-size: 86px;
@@ -70,7 +72,7 @@ $mq-breakpoints: (
   line-height: 96px;
 }
 
-@mixin ff-desktop-xl{
+@mixin ff-desktop-xl {
   font-family: "Source Serif Pro";
   font-weight: 400;
   font-size: 41px;
@@ -79,7 +81,7 @@ $mq-breakpoints: (
   line-height: 54px;
 }
 
-@mixin ff-desktop-l{
+@mixin ff-desktop-l {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 29px;
@@ -88,7 +90,7 @@ $mq-breakpoints: (
   line-height: 36px;
 }
 
-@mixin ff-desktop-m{
+@mixin ff-desktop-m {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 20px;
@@ -97,7 +99,7 @@ $mq-breakpoints: (
   line-height: 30px;
 }
 
-@mixin ff-desktop-s{
+@mixin ff-desktop-s {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 14px;
@@ -106,30 +108,95 @@ $mq-breakpoints: (
   line-height: 24px;
 }
 
-
-html, body{
+html,
+body {
   @include ff-mobile-m;
   @include mq($from: tablet) {
     @include ff-mobile-m;
   }
 }
-h1{
+h1 {
   @include ff-mobile-xxl;
   @include mq($from: tablet) {
     @include ff-desktop-xxl;
   }
 }
 
-h2{
+h2 {
   @include ff-mobile-xl;
   @include mq($from: tablet) {
     @include ff-desktop-xl;
   }
 }
 
-h3{
+h3 {
   @include ff-mobile-l;
   @include mq($from: tablet) {
     @include ff-desktop-l;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+//elements
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $color-accent;
+}
+
+//objects
+
+.o-box {
+  padding: $spacing-unit * 4;
+  &--light {
+    background: #d8d8d8;
+  }
+}
+
+.c-signature {
+  text-align: right;
+  padding: $spacing-unit * 4 0;
+}
+.c-wobble{
+  padding: $spacing-unit * 10 $spacing-unit * 4;
+}
+.c-hero{
+  padding: $spacing-unit * 10 $spacing-unit * 4;
+}
+
+.l-container {
+  max-width: 50rem;
+  margin: auto;
+}
+//utilities
+
+.u-color-accent {
+  color: $color-accent;
+}
+
+.u-padding {
+  &-horizontal {
+    padding-left: $spacing-unit * 2;
+    padding-right: $spacing-unit * 2;
+  }
+  &-vertical {
+    padding-top: $spacing-unit * 2;
+    padding-bottom: $spacing-unit * 2;
+    &-l{
+      padding-top: $spacing-unit * 4;
+      padding-bottom: $spacing-unit * 4;
+    }
+    &-xl{
+      padding-top: $spacing-unit * 2;
+      padding-bottom: $spacing-unit * 2;
+    }
   }
 }
