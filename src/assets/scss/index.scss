@@ -1,0 +1,124 @@
+@import "./fonts/source-sans-pro";
+@import "./fonts/source-serif-pro";
+$color-accent : #EB2F06;
+
+$mq-breakpoints: (
+        mobile:  320px,
+        tablet:  740px,
+        desktop: 980px,
+        wide:    1300px
+);
+
+@import '../../../node_modules/sass-mq/mq';
+//Mobile
+
+@mixin ff-mobile-xxl{
+  font-family: SourceSerifPro-Semibold;
+  font-size: 64px;
+  color: #000000;
+  text-align: left;
+  line-height: 72px;
+}
+
+@mixin ff-mobile-xl{
+  font-family: SourceSerifPro-Regular;
+  font-size: 31px;
+  color: #000000;
+  text-align: left;
+  line-height: 42px;
+}
+
+@mixin ff-mobile-l{
+  font-family: SourceSansPro-Regular;
+  font-size: 25px;
+  color: #000000;
+  text-align: left;
+  line-height: 30px;
+}
+
+@mixin ff-mobile-m{
+  font-family: SourceSansPro-Regular;
+  font-size: 18px;
+  color: #000000;
+  text-align: left;
+  line-height: 24px;
+}
+
+@mixin ff-mobile-s{
+  font-family: SourceSansPro-Regular;
+  font-size: 12px;
+  color: #000000;
+  text-align: left;
+  line-height: 18px;
+}
+
+//Desktop
+
+@mixin ff-desktop-xxl{
+  font-family: SourceSerifPro-Semibold;
+  font-size: 86px;
+  color: #000000;
+  letter-spacing: -2.58px;
+  text-align: left;
+  line-height: 96px;
+}
+
+@mixin ff-desktop-xl{
+  font-family: SourceSerifPro-Regular;
+  font-size: 41px;
+  color: #000000;
+  text-align: left;
+  line-height: 54px;
+}
+
+@mixin ff-desktop-l{
+  font-family: SourceSansPro-Regular;
+  font-size: 29px;
+  color: #000000;
+  text-align: left;
+  line-height: 36px;
+}
+
+@mixin ff-desktop-m{
+  font-family: SourceSansPro-Regular;
+  font-size: 20px;
+  color: #000000;
+  text-align: left;
+  line-height: 30px;
+}
+
+@mixin ff-desktop-s{
+  font-family: SourceSansPro-Regular;
+  font-size: 14px;
+  color: #000000;
+  text-align: left;
+  line-height: 24px;
+}
+
+
+html, body{
+  @include ff-mobile-m;
+  @include mq($from: tablet) {
+    @include ff-mobile-m;
+  }
+}
+h1{
+  @include ff-mobile-xxl;
+  @include mq($from: tablet) {
+    @include ff-desktop-xxl;
+  }
+}
+
+h2{
+  @include ff-mobile-xl;
+  @include mq($from: tablet) {
+    @include ff-desktop-xl;
+  }
+}
+
+h3{
+  @include ff-mobile-l;
+  @include mq($from: tablet) {
+    @include ff-desktop-l;
+  }
+}
