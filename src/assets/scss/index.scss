@@ -1,5 +1,6 @@
 @import "./fonts/source-sans-pro";
 @import "./fonts/source-serif-pro";
+
 $color-accent: #eb2f06;
 
 $mq-breakpoints: (
@@ -115,6 +116,7 @@ body {
     @include ff-mobile-m;
   }
 }
+
 h1 {
   @include ff-mobile-xxl;
   @include mq($from: tablet) {
@@ -141,6 +143,7 @@ h2,
 h3 {
   margin: 0;
 }
+
 //elements
 html,
 body {
@@ -156,6 +159,7 @@ a {
 
 .o-box {
   padding: $spacing-unit * 4;
+
   &--light {
     background: #d8d8d8;
   }
@@ -164,28 +168,80 @@ a {
 .c-signature {
   text-align: right;
   padding: $spacing-unit * 4 0;
-  &__img{
-    width: 15*$spacing-unit;
+
+  &__img {
+    width: 15 * $spacing-unit;
     @include mq($from: tablet) {
-      width: 30*$spacing-unit;
+      width: 30 * $spacing-unit;
     }
   }
 }
 
-.c-wobble{
+.c-wobble {
   padding: $spacing-unit * 10 $spacing-unit * 4;
-  &__img{
+
+  &__img {
     max-width: 100%;
   }
 }
-.c-hero{
+
+.c-hero {
   padding: $spacing-unit * 10 $spacing-unit * 4;
 }
+
+.c-about {
+  max-width: 60rem;
+  margin: auto;
+  @include mq($until: desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    margin: 1rem;
+    @include mq($from: desktop) {
+      margin: 0 15rem;
+    }
+  }
+
+  &__shape {
+    max-width: 50%;
+    margin: auto;
+    @include mq($until: desktop) {
+      order: 1;
+    }
+    @include mq($from: desktop) {
+      float: left;
+      margin: 1rem;
+      shape-margin: 1rem;
+      shape-outside: polygon(
+        83.54% 90.56%,
+        52.72% 96.79%,
+        70px 99.86%,
+        0px 88.4%,
+        0px 23.7%,
+        29.99% 6.39%,
+        76.39% -0.47%,
+        76.85% 7%,
+        73.53% 14.41%,
+        78.46% 24.72%,
+        72.44% 40.19%,
+        64.21% 45.88%,
+        83.19% 51.79%,
+        96.55% 67.36%,
+        82.02% 75.81%,
+        87.83% 84.99%
+      );
+    }
+  }
+}
+
+//layout
 
 .l-container {
   max-width: 50rem;
   margin: auto;
 }
+
 //utilities
 
 .u-color-accent {
@@ -197,14 +253,17 @@ a {
     padding-left: $spacing-unit * 2;
     padding-right: $spacing-unit * 2;
   }
+
   &-vertical {
     padding-top: $spacing-unit * 2;
     padding-bottom: $spacing-unit * 2;
-    &-l{
+
+    &-l {
       padding-top: $spacing-unit * 4;
       padding-bottom: $spacing-unit * 4;
     }
-    &-xl{
+
+    &-xl {
       padding-top: $spacing-unit * 2;
       padding-bottom: $spacing-unit * 2;
     }
