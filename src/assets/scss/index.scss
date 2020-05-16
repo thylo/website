@@ -164,9 +164,19 @@ a {
 .c-signature {
   text-align: right;
   padding: $spacing-unit * 4 0;
+  &__img{
+    width: 15*$spacing-unit;
+    @include mq($from: tablet) {
+      width: 30*$spacing-unit;
+    }
+  }
 }
+
 .c-wobble{
   padding: $spacing-unit * 10 $spacing-unit * 4;
+  &__img{
+    max-width: 100%;
+  }
 }
 .c-hero{
   padding: $spacing-unit * 10 $spacing-unit * 4;

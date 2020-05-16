@@ -3,8 +3,11 @@ layout: about.njk
 permalink: /about.html
 ---
 
-# About me
+<h1 class="u-padding-vertical-l">About <span class="u-color-accent">me</span></h1>
 
+![](/img/wobbly.svg)
+
+<div class="u-padding-vertical-l">
 From 2005 to 2009, I studied multimedia development at the IAD in 
 Louvain-La-Neuve, Belgium. 
 
@@ -36,4 +39,5 @@ admin putting a strong focus on UX. It was a pleasure to work and collaborate wi
 In 2019, I joined Belighted and finally got to work with Simon Henrotte whom I have crossed path with a couple of time.
 Along my frontend developer at Belighted, I started teaching "the dynamic web" at the IAD, crossing once again Thomas Henrion &amp; Jérome Coupé path.
 
-In my free time, I enjoy taking care of my 3 children, having a good belgian beer while playing roleplaying games and discovering new itineraries to cycle to work. 
+In my free time, I enjoy taking care of my 3 children, having a good belgian beer while playing roleplaying games and discovering new itineraries to cycle to work.
+</div> 
