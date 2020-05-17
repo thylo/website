@@ -1,0 +1,16 @@
+.c-primary-nav{
+  border-bottom: 1px solid #dbdbdb;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link{
+    display: inline-block;
+    padding: $global-spacing-unit;
+  }
+  &__brand{
+    @include ff-mobile-l;
+    text-decoration: none;
+    color: black;
+  }
+}

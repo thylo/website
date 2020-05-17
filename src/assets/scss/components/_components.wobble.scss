@@ -1,0 +1,7 @@
+.c-wobble {
+  padding: $spacing-unit * 10 $spacing-unit * 4;
+  text-align: center;
+  &__img {
+    max-width: 100%;
+  }
+}

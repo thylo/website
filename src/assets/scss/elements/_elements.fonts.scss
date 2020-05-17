@@ -1,0 +1,32 @@
+html,
+body {
+  @include ff-mobile-m;
+  @include mq($from: tablet) {
+    @include ff-desktop-m;
+  }
+}
+
+h1 {
+  @include ff-mobile-xxl;
+  @include mq($from: tablet) {
+    @include ff-desktop-xxl;
+  }
+}
+
+h2 {
+  @include ff-mobile-xl;
+  @include mq($from: tablet) {
+    @include ff-desktop-xl;
+  }
+}
+
+h3 {
+  @include ff-mobile-l;
+  @include mq($from: tablet) {
+    @include ff-desktop-l;
+  }
+}
+
+a {
+  color: $color-accent;
+}

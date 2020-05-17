@@ -1,0 +1,21 @@
+.c-hero {
+  padding: $spacing-unit * 10 $spacing-unit * 4;
+  display: grid;
+  grid-template-columns : 1fr 1fr 1fr;
+  grid-template-rows : 1fr;
+  &__content{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+  }
+  &__img{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}

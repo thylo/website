@@ -1,0 +1,94 @@
+//Mobile
+
+@mixin ff-mobile-xxl {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 64px;
+  color: #000000;
+  text-align: left;
+  line-height: 72px;
+}
+
+@mixin ff-mobile-xl {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 31px;
+  color: #000000;
+  text-align: left;
+  line-height: 42px;
+}
+
+@mixin ff-mobile-l {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000000;
+  text-align: left;
+  line-height: 30px;
+}
+
+@mixin ff-mobile-m {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-align: left;
+  line-height: 24px;
+}
+
+@mixin ff-mobile-s {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+  text-align: left;
+  line-height: 18px;
+}
+
+//Desktop
+
+@mixin ff-desktop-xxl {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 86px;
+  color: #000000;
+  letter-spacing: -2.58px;
+  text-align: left;
+  line-height: 96px;
+}
+
+@mixin ff-desktop-xl {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 41px;
+  color: #000000;
+  text-align: left;
+  line-height: 54px;
+}
+
+@mixin ff-desktop-l {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 29px;
+  color: #000000;
+  text-align: left;
+  line-height: 36px;
+}
+
+@mixin ff-desktop-m {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-align: left;
+  line-height: 30px;
+}
+
+@mixin ff-desktop-s {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  text-align: left;
+  line-height: 24px;
+}
