@@ -1,51 +1,51 @@
 [
   {
-    "nick": "albandef",
+    "slug": "albandf",
     "name": "Alban de Fraipont",
     "link": "https://twitter.com/albandf"
   },
   {
-    "nick": "badou",
+    "slug": "badou",
     "name": "Thomas Henrion",
     "link": "https://www.linkedin.com/in/thomas-henrion-7133ab15/"
   },
   {
-    "nick": "dja",
+    "slug": "dja",
     "name": "David Jakubowski",
     "link": "https://www.linkedin.com/in/david-jakubowski-7025323/?originalSubdomain=be"
   },
   {
-    "nick": "pvledoux",
+    "slug": "pvledoux",
     "name": "Pierre-Vincent Ledoux",
     "link": "https://twitter.com/pvledoux"
   },
   {
-    "nick": "jeromecoupe",
+    "slug": "jeromecoupe",
     "name": "Jérome Coupé",
     "link": "https://twitter.com/jeromecoupe"
   },
   {
-    "nick": "kant312",
+    "slug": "kant312",
     "name": "Quentin Delcourt",
     "link": "https://twitter.com/kant312"
   },
   {
-    "nick": "kant312",
+    "slug": "kant312",
     "name": "Quentin Delcourt",
     "link": "https://twitter.com/kant312"
   },
   {
-    "nick": "she",
+    "slug": "she",
     "name": "Simon Henrotte",
     "link": "https://www.linkedin.com/in/simonhenrotte/?originalSubdomain=be"
   },
   {
-    "nick": "pitbi",
+    "slug": "pitbi",
     "name": "Pierre Biezemans",
     "link": "https://www.linkedin.com/in/pierre-biezemans-a3a4056b/?originalSubdomain=be"
   },
   {
-    "nick": "aureliemoreels",
+    "slug": "aureliemoreels",
     "name": "Aurélie Moreels",
     "link": "https://www.aureliemoreels.be"
   }
