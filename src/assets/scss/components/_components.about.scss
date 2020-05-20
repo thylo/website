@@ -7,12 +7,15 @@
   }
   &__content {
     margin: 1rem;
+    position: relative;
+    z-index: 2;
     @include mq($from: desktop) {
       margin: 0 15rem;
     }
   }
 
   &__shape {
+    z-index: 1;
     max-width: 50%;
     margin: auto;
     position: relative;
