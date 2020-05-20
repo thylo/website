@@ -1,0 +1,9 @@
+learnings:
+  - date: 2020-05-19
+    list:
+      - body: I finally got to use downshift to create a custom select input, it really alleviate a lot of the boilerplate of setting up custom <select />
+        link: https://github.com/downshift-js/downshift
+      - body: I made a small shortcode in 11ty to link to my friends link.
+        link: https://www.11ty.dev/docs/custom-tags/
+      - body: I learned how to use regexes to replace text inside a capturing group
+        link: https://www.jetbrains.com/help/phpstorm/tutorial-finding-and-replacing-text-using-regular-expressions.html#
